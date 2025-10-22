@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2 Rose S2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            background-color: #fff5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff8fb1, #ff6b95);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .nav-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .nav-item a {
+            text-decoration: none;
+            color: #ff6b95;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+        }
+
+        .nav-item a:hover {
+            color: #ff4777;
+        }
+
+        @media (max-width: 600px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>❤️ S2 Rose S2 ❤️</h1>
+    </header>
+
+    <div class="container">
+        <nav class="nav-grid">
+            <div class="nav-item">
+                <a href="dog-intro.html">강아지 소개</a>
+            </div>
+            <div class="nav-item">
+                <a href="snacks.html">간식 구매처</a>
+            </div>
+            <div class="nav-item">
+                <a href="food.html">사료 구매처</a>
+            </div>
+            <div class="nav-item">
+                <a href="toys.html">장난감 구매처</a>
+            </div>
+            <div class="nav-item">
+                <a href="hospital.html">동물 병원</a>
+            </div>
+            <div class="nav-item">
+                <a href="beauty.html">미용</a>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
