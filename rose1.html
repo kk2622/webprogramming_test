@@ -18,7 +18,13 @@
         }
 
         header {
-            background: linear-gradient(135deg, #ecc2cf, #ffc3d4);
+            background: linear-gradient(135deg, 
+                #707070,
+                #9e8589 25%,
+                #cc969f 50%,
+                #ffa4b6 75%,
+                #ffb3c1
+            );
             color: white;
             text-align: center;
             padding: 2rem;
@@ -28,7 +34,31 @@
 
         header h1 {
             font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            color: #c5aed6;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 
+                /* 하이라이트 효과 */
+                0 1px #f0e6ff,
+                0 -1px #f0e6ff,
+                1px 0 #f0e6ff,
+                -1px 0 #f0e6ff,
+                /* 풍선같은 입체감을 위한 그라데이션 효과 */
+                1px 1px #d7c5ea,
+                2px 2px #cbb5e2,
+                3px 3px #bea4d5,
+                4px 4px #b093c8,
+                /* 바깥쪽 글로우 효과 */
+                5px 5px 6px rgba(164, 129, 190, 0.4),
+                6px 6px 10px rgba(164, 129, 190, 0.2);
+            transform: perspective(200px) rotateX(10deg);
+            transform-style: preserve-3d;
+        }
+        
+        /* 호버 효과 추가 - 마우스를 올리면 살짝 떠오르는 효과 */
+        header h1:hover {
+            transform: perspective(200px) rotateX(10deg) translateY(-5px);
+            transition: transform 0.3s ease;
         }
 
         .container {
@@ -62,7 +92,7 @@
 
         .nav-item a {
             text-decoration: none;
-            color: #fddbe5;
+            color: #a576ad;
             font-size: 1.2rem;
             font-weight: bold;
             display: block;
@@ -82,7 +112,7 @@
 </head>
 <body>
     <header>
-        <h1>❤️ S2 Rose S2 ❤️</h1>
+        <h1><a href="rose-gallery.html" style="text-decoration: none; color: inherit;">❤️ S2 Rose S2 ❤️</a></h1>
     </header>
 
     <div class="container">
