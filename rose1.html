@@ -108,6 +108,77 @@
                 grid-template-columns: 1fr;
             }
         }
+        /* 갤러리 배너 (다른 배너와 동일한 디자인/색상으로 맞춤) */
+        .gallery-banner-wrap {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 80px;
+        }
+
+        .gallery-banner {
+            display: block;
+            width: calc(100% - 40px);
+            max-width: 1200px;
+            height: 110px;
+            /* 다른 서브페이지 헤더 색상(핑크-코랄 그라데이션)을 사용하고 뒤에 발바닥 패턴을 깔아 동일한 디자인으로 맞춤 */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'%3E%3Cpath fill='rgba(255,255,255,0.08)' d='M17.5 12a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-.5-6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-6 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-6 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm12 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z'/%3E%3C/svg%3E" , linear-gradient(135deg, #ff8fb1, #ff6b95);
+            background-repeat: repeat, no-repeat;
+            background-position: center, center;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 14px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-banner::after{
+            /* subtle highlight similar to .btn-hero */
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle at 50% 10%, rgba(255,255,255,0.08), transparent 20%);
+            border-radius: 999px;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .gallery-banner:hover::after,
+        .gallery-banner:focus::after{ opacity: 1 }
+
+        .gallery-banner:hover,
+        .gallery-banner:focus {
+            transform: translateY(-6px);
+            box-shadow: 0 26px 60px rgba(255,115,90,0.18);
+            outline: none;
+        }
+
+        .gallery-banner .sub {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 700;
+            opacity: 0.95;
+            margin-top: 6px;
+            color: rgba(59,11,24,0.95);
+        }
+
+        @media (max-width: 600px) {
+            .gallery-banner { height: 84px; font-size: 1.1rem; }
+            .gallery-banner .sub { font-size: 0.78rem; }
+        }
     </style>
 </head>
 <body>
@@ -136,6 +207,15 @@
                 <a href="rose-web/beauty.html">미용</a>
             </div>
         </nav>
+    </div>
+    <!-- 큰 가로형 갤러리 배너: 아래쪽에 눈에 띄게 배치 -->
+    <div class="gallery-banner-wrap">
+        <a class="gallery-banner" href="rose-web/rose-gallery.html" aria-label="로제 갤러리 열기 - 클릭하면 갤러리 페이지로 이동합니다">
+            <div>
+                로제 갤러리 보러가기 — 사진 모두 보기
+                <span class="sub">클릭하면 큰 사진과 캡션을 볼 수 있어요</span>
+            </div>
+        </a>
     </div>
 </body>
 </html>
