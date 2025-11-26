@@ -1,0 +1,39 @@
+
+# Today — 2025-11-26
+
+This file lists the work planned for today and the steps to complete them. The format is GitHub-friendly so it displays cleanly in the repository.
+
+## Overview
+- Goal: Update `rose/rose-web/beauty.html` with a clean design and add the materials (images/text) needed for the page. Prepare changes so they are easy to commit and review on GitHub.
+
+## Tasks (Today)
+
+1. Gather materials for `beauty.html` (not started)
+	- Find salon names, addresses, phone numbers, short descriptions, and images to include.
+	- Save any new images under `rose/rose-web/assets/` or `rose/rose-image/` and note filenames.
+
+2. Edit `rose/rose-web/beauty.html` (not started)
+	- Apply consistent header/banner style (matching other pages), including paw-print pattern.
+	- Insert the gathered content into accessible HTML (use semantic tags, alt text for images).
+	- Ensure the layout is responsive and mobile-friendly.
+
+3. Add and optimize image assets (not started)
+	- Resize and compress images for web (suggested sizes: thumbnails 400–800px wide).
+	- Use descriptive filenames and add brief captions for each image.
+
+4. Local test & QA (not started)
+	- Run a local server and open `rose/rose-web/beauty.html` to verify visuals and functionality.
+	- Check keyboard navigation, focus order, and image alt texts.
+
+5. Prepare commit & update README (not started)
+	- Commit changes with a clear message (e.g., `feat(rose): update beauty.html + add assets (2025-11-26)`)
+	- Update `rose/README.md` with a changelog line describing today's edits for visibility on GitHub.
+
+## Notes
+- Keep all changes minimal and well-commented in the HTML where helpful.
+- If you want, I can implement steps 1–2 now: gather content and apply the new design to `beauty.html`. Tell me if you prefer I start with content gathering or implement the layout first.
+
+---
+
+_Generated: 2025-11-26_
+
