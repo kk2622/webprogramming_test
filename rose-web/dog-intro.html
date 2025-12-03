@@ -25,11 +25,27 @@
         }
 
         header {
-            background: linear-gradient(135deg, #ff8fb1, #ff6b95);
+            background: linear-gradient(135deg, 
+                #707070,
+                #9e8589 25%,
+                #cc969f 50%,
+                #ffa4b6 75%,
+                #ffb3c1
+            );
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem;
             margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #c5aed6;
+            letter-spacing: 1px;
+            font-weight: bold;
+            text-shadow: 0 1px #f0e6ff, 1px 1px #d7c5ea, 3px 3px #bea4d5;
+            margin: 0;
         }
 
         h1 {
@@ -43,11 +59,67 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
+        /* Profile photo + speech bubble */
+        .profile {
+            position: relative;
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .dog-photo {
+            width: 220px;
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            display: block;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            top: -10px;
+            right: -8px;
+            background: #ffffff;
+            color: #333;
+            border-radius: 12px;
+            padding: 16px 14px;
+            min-height: 72px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            max-width: 64%;
+            font-size: 16px; /* match back-link/button text size */
+            line-height: 1.5;
+            border: 1px solid #b093c8;
+        }
+
+        .speech-bubble:after {
+            content: '';
+            position: absolute;
+            left: 22px; /* moved tail to left */
+            bottom: -12px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 12px solid #ffffff;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.06));
+        }
+
+        /* secondary bubble (same style, positioned lower) */
+        .speech-bubble.secondary {
+            top: 122px; /* placed further below the primary bubble (~+30px) */
+        }
+
+        @media (max-width: 520px) {
+            .speech-bubble { max-width: 75%; top: -6px; right: -6px; font-size: 15px; padding: 14px 12px; min-height: 60px; }
+            .speech-bubble.secondary { top: 100px; }
+            .dog-photo { width: 180px; }
+            .speech-bubble:after { left: 18px; bottom: -10px; }
+        }
+
         .back-link {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #ff6b95;
+            background-color: #c5aed6;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -55,7 +127,7 @@
         }
 
         .back-link:hover {
-            background-color: #ff4777;
+            background-color: #b093c8;
         }
     </style>
 </head>
@@ -66,11 +138,11 @@
 
     <div class="container">
         <div class="content">
-            <h2>로제 소개</h2>
-            <p>안녕하세요! 저는 로제에요!</p>
-            <p>나이: 2살</p>
-            <p>품종: 푸들</p>
-            <p>특징: 소심한데 너무 귀여워요.</p>
+            <div class="profile">
+                <img src="./rose-image/cuteRose.jpg" alt="로제 사진" class="dog-photo" loading="lazy" onerror="this.onerror=null;this.src='./rose-image/cuteRose.jpg';">
+                <div class="speech-bubble">안녕하세요! 저는 로제에요. 저의 나이는 지금 2살 조금 넘었고요, 푸들이에요. 저는 조금 소심하지만 집 안 귀염둥이입니다! 만나서 반가워요!</div>
+                <div class="speech-bubble secondary">제가 제일 좋아하는 간식은 닭가슴살이고요, 공놀이 하는 것을 좋아해요!</div>
+            </div>
         </div>
         <a href="../rose1.html" class="back-link">메인으로 돌아가기</a>
     </div>
